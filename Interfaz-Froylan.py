@@ -3,22 +3,6 @@ from tkinter import *
 
 #########################################################################
 
-def AnimacionRecursiva(contador,img,can,x): #Funcion recursiva que hace posible que la animacion funcione y se proyecte 
-    if contador>12: 
-        contador=1
-    nombre=".\ImagenesAnimacion\\Img"+str(contador)+".gif"
-    img = PhotoImage(file=nombre)
-    can.create_image(x, 20, image=img, anchor=NW,tag="img")
-    can.pack()
-    can.update()
-
-    contador+=1
-    x=x+10
-    if x>=900:
-        x=10
-    time.sleep(0.04) 
-    can.delete("img")
-    return AnimacionRecursiva(contador,img,can,x)
 
 #########################################################################
 
